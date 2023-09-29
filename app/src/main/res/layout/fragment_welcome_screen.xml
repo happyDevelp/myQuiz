@@ -8,8 +8,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <!--android:background="#8BD1CDC6"-->
+        android:layout_height="match_parent"
+        android:background="#8BD1CABE"
+        >
 
         <ImageView
             android:id="@+id/imageView"

@@ -1,5 +1,6 @@
 package com.example.myquiz
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -44,11 +45,13 @@ class Quiz : Fragment() {
         return listOfQuestions
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentQuizBinding.inflate(inflater, container, false)
+        binding.tvToolBar.text = "Answer (${currentRightAnswer + 1}/3)"
 
         var idElem: Int = 0
         randomizeQuestions()
@@ -68,6 +71,7 @@ class Quiz : Fragment() {
 
             if (currentQuestion.correctAnswer == idElem) {
                 currentRightAnswer++
+                binding.tvToolBar.text = "Answer (${currentRightAnswer + 1}/3)"
             }
             else {
                 view.findNavController().navigate(R.id.action_quiz_to_fragmentGameOver)
