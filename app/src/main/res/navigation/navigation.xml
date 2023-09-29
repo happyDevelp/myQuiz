@@ -30,9 +30,17 @@
         android:id="@+id/fragmentWon"
         android:name="com.example.myquiz.FragmentWon"
         android:label="fragment__won"
-        tools:layout="@layout/fragment__won" />
+        tools:layout="@layout/fragment__won" >
+        <action
+            android:id="@+id/action_fragmentWon_to_quiz"
+            app:destination="@id/quiz" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentGameOver"
         android:name="com.example.myquiz.FragmentGameOver"
-        android:label="FragmentGameOver" />
+        android:label="FragmentGameOver" >
+        <action
+            android:id="@+id/action_fragmentGameOver_to_quiz"
+            app:destination="@id/quiz" />
+    </fragment>
 </navigation>
