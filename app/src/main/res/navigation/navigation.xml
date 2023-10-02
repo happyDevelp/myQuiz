@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
+    android:label="@string/title_about_trivia"
     app:startDestination="@id/welcomeScreen">
 
     <fragment
         android:id="@+id/welcomeScreen"
         android:name="com.example.myquiz.WelcomeScreen"
         android:label="fragment_welcome_screen"
-        tools:layout="@layout/fragment_welcome_screen" >
+        tools:layout="@layout/fragment_welcome_screen">
         <action
             android:id="@+id/action_welcomeScreen_to_quiz"
             app:destination="@id/quiz" />
@@ -18,7 +19,7 @@
         android:id="@+id/quiz"
         android:name="com.example.myquiz.Quiz"
         android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" >
+        tools:layout="@layout/fragment_quiz">
         <action
             android:id="@+id/action_quiz_to_fragmentWon"
             app:destination="@id/fragmentWon"
@@ -34,7 +35,7 @@
         android:id="@+id/fragmentWon"
         android:name="com.example.myquiz.FragmentWon"
         android:label="fragment__won"
-        tools:layout="@layout/fragment__won" >
+        tools:layout="@layout/fragment__won">
         <action
             android:id="@+id/action_fragmentWon_to_quiz"
             app:destination="@id/quiz"
@@ -43,10 +44,14 @@
     <fragment
         android:id="@+id/fragmentGameOver"
         android:name="com.example.myquiz.FragmentGameOver"
-        android:label="FragmentGameOver" >
+        android:label="FragmentGameOver">
         <action
             android:id="@+id/action_fragmentGameOver_to_quiz"
             app:destination="@id/quiz"
             app:popUpTo="@id/welcomeScreen" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="AboutFragment"
+        android:label="AboutFragment" />
 </navigation>

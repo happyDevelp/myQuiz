@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompatSideChannelService
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
@@ -51,7 +52,9 @@ class Quiz : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentQuizBinding.inflate(inflater, container, false)
+/*
         binding.tvToolBar.text = "Answer (${currentRightAnswer + 1}/3)"
+*/
 
         var idElem: Int = 0
         randomizeQuestions()
@@ -71,11 +74,13 @@ class Quiz : Fragment() {
 
             if (currentQuestion.correctAnswer == idElem) {
                 currentRightAnswer++
+/*
                 binding.tvToolBar.text = "Answer (${currentRightAnswer + 1}/3)"
+*/
             }
             else {
                 view.findNavController().navigate(R.id.action_quiz_to_fragmentGameOver)
-                return@setOnClickListener //What if delete?
+                return@setOnClickListener
             }
             currentQuestionIndex++
 
@@ -101,6 +106,8 @@ class Quiz : Fragment() {
         binding.rb0.text = currentQuestion.answers[0]
         binding.rb1.text = currentQuestion.answers[1]
         binding.rb2.text = currentQuestion.answers[2]
+        (activity as AppCompatActivity).supportActionBar?.title =
+            getString(R.string.title_android_trivia_question, currentQuestionIndex + 1, COUNT_ANSWERS)
     }
 
 

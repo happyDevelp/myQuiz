@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:background="#2D6ABC2F">
 
-        <androidx.appcompat.widget.Toolbar
+        <!-- <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,7 +19,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
             <TextView
 
@@ -35,7 +36,7 @@
                 />
 
 
-        </androidx.appcompat.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>-->
 
         <ImageView
             android:id="@+id/imageView2"
@@ -52,10 +53,10 @@
             android:id="@+id/tv_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center"
             android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="20dp"
             android:text="@string/how_many_states_are_there_in_the_usa"
+            android:textAlignment="center"
             android:textSize="@dimen/text_size"
             app:layout_constraintBottom_toTopOf="@+id/rb_group"
             app:layout_constraintEnd_toEndOf="parent"
