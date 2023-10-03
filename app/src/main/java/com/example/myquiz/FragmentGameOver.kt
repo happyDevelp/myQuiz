@@ -20,7 +20,7 @@ class FragmentGameOver : Fragment() {
         val binding: FragmentGameOverBinding = FragmentGameOverBinding.inflate(inflater, container, false)
         (activity as AppCompatActivity).supportActionBar?.title = "myQuiz"
         binding.btnTryAgain.setOnClickListener {view: View ->
-            view.findNavController().navigate(R.id.action_fragmentGameOver_to_quiz)
+            view.findNavController().navigate(FragmentGameOverDirections.actionFragmentGameOverToQuiz())
         }
 
 

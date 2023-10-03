@@ -79,7 +79,7 @@ class Quiz : Fragment() {
 */
             }
             else {
-                view.findNavController().navigate(R.id.action_quiz_to_fragmentGameOver)
+                view.findNavController().navigate(QuizDirections.actionQuizToFragmentGameOver() )
                 return@setOnClickListener
             }
             currentQuestionIndex++
@@ -89,7 +89,7 @@ class Quiz : Fragment() {
             }
 
             else {
-                view.findNavController().navigate(R.id.action_quiz_to_fragmentWon)
+                view.findNavController().navigate(QuizDirections.actionQuizToFragmentWon(COUNT_ANSWERS, currentQuestionIndex))
                 currentRightAnswer = 0
                 currentQuestionIndex = 0
                 randomizeQuestions()

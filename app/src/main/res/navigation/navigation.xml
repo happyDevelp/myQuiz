@@ -40,6 +40,11 @@
             android:id="@+id/action_fragmentWon_to_quiz"
             app:destination="@id/quiz"
             app:popUpTo="@id/welcomeScreen" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+        <argument android:name="numQuestions"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/fragmentGameOver"

@@ -30,7 +30,7 @@ class WelcomeScreen : Fragment() {
 
 
         binding.btnStartGame.setOnClickListener { view: View ->
-            Navigation.findNavController(view).navigate(R.id.action_welcomeScreen_to_quiz)
+            Navigation.findNavController(view).navigate(WelcomeScreenDirections.actionWelcomeScreenToQuiz())
         }
 
         setHasOptionsMenu(true)
