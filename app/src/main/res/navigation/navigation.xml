@@ -59,4 +59,9 @@
         android:id="@+id/aboutFragment"
         android:name="AboutFragment"
         android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.myquiz.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
 </navigation>
