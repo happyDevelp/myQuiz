@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.myquiz.databinding.ActivityMainBinding
 
 
@@ -24,8 +25,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         drawerLayout = binding.drawerLayout
-
-        supportActionBar?.title = "myQuiz"
 
         val navController = this.findNavController(R.id.myWelcomeNavHostFragment)
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)

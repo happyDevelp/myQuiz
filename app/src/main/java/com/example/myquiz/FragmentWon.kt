@@ -22,13 +22,11 @@ class FragmentWon : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         val binding: FragmentWonBinding = FragmentWonBinding.inflate(inflater, container, false)
-        (activity as AppCompatActivity).supportActionBar?.title = "myQuiz"
         binding.btnTryAgain.setOnClickListener { view: View ->
             view.findNavController().navigate(FragmentWonDirections.actionFragmentWonToQuiz())
         }
 
         //Receive data from Quiz class
-
 
         /*  Toast.makeText(context,
               "NumCorrect: ${args.numCorrect}, numQuestions: ${args.numQuestions}",

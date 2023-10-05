@@ -24,7 +24,6 @@ class WelcomeScreen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        (activity as AppCompatActivity).supportActionBar?.title = "myQuiz"
         // Inflate the layout for this fragment
         binding = FragmentWelcomeScreenBinding.inflate(inflater, container, false)
 

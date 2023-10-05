@@ -14,7 +14,7 @@ class AboutFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         val binding: FragmentAboutBinding = FragmentAboutBinding.inflate(inflater, container, false)
-        (activity as AppCompatActivity).supportActionBar?.title = "myQuiz"
+
         return binding.root
     }
 }
